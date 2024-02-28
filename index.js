@@ -11,9 +11,9 @@ const apiKey = '8c5d2684-e428-41a0-b71b-4fa20f4445ae';
 const symbols = 'RNDR,MATIC,ONDO,NEAR,GALA,MANTA,BGB'
 
 
-app.use(express.static('public'));
-
-app.set('view engine', 'ejs');
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 
 app.get('/', async (req, res) => {
     try {
