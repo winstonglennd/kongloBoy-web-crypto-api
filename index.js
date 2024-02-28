@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 const apiDom = 'https://pro-api.coinmarketcap.com';
-const apiKey = '8c5d2684-e428-41a0-b71b-4fa20f4445ae';
+const apiKey = 'c024e920-8f5d-43d9-85f4-63c66c247d42';
 
 const symbols = 'RNDR,MATIC,ONDO,NEAR,GALA,MANTA,BGB'
 
