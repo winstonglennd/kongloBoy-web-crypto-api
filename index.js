@@ -1,5 +1,6 @@
-import express from 'express';
-import axios from 'axios';
+const express = require('express');
+const axios = require('axios');
+const ejs = require('ejs');
 
 const app = express();
 const port = 3000;
@@ -12,6 +13,8 @@ const symbols = 'RNDR,MATIC,ONDO,NEAR,GALA,MANTA,BGB'
 
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
+
 app.get('/', async (req, res) => {
     try {
         const result = await axios.get(apiDom + '/v2/cryptocurrency/quotes/latest' + 
@@ -20,7 +23,7 @@ app.get('/', async (req, res) => {
                 'X-CMC_PRO_API_KEY': apiKey,
             },
         });
-        res.render('index.ejs', {coins: result.data.data});
+        res.render('index', {coins: result.data.data});
         console.log(result.data.data);
     } catch(error) {
         console.error('Error fetching data:', error);
