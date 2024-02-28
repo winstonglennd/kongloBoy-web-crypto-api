@@ -305,14 +305,14 @@ img:not([src]):not(:empty) {
 }
 
 .winston-pfp {
-   background-image: url(../images/Winston_1.jpeg);
+   background-image: url(../images/Winston_1.jpg);
    background-position: bottom;
    background-size: cover;
 
 }
 
 .rafel-pfp {
-   background-image: url(../images/IMG_3800.JPG);
+   background-image: url(../images/Winston_1.jpg);
    background-position: center;
    background-size: cover;
 }
