@@ -305,7 +305,7 @@ img:not([src]):not(:empty) {
 }
 
 .winston-pfp {
-   background-image: url(../images/Winston_1.jpg);
+   background-image: url(../images/Winston-pfp.jpeg);
    background-position: bottom;
    background-size: cover;
 
