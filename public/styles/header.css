@@ -1,0 +1,115 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    padding: 0 30px;
+}
+
+.navbar h3 {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-links-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    gap: 8vw;
+    padding-right: 5vw;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: purple;
+    position: relative;
+}
+
+.navbar-links-container a::after {
+    content: " ";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.navbar-links-container a:hover::after {
+    width: 100%;
+}
+
+hr {
+    color: black;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: purple;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar-links-container{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 0;
+        gap: 10px;
+        position: fixed;
+        left: -110%;
+        height: 20vh;
+        top: 75px;
+        gap: 0;
+        background-color: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navbar-links-container.active {
+        left: 0;
+    }
+    
+}

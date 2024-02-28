@@ -1,0 +1,156 @@
+<%- include("./partials/header.ejs") %>
+
+
+    <section class="our-vision gradient-background" id="our-vision-section">
+        <div class="vision-container container">
+            <h1 class="vision-title title txt-white hidden">We are KongloBoy Capital, Pioneers in Cryptocurrency
+                Investment.
+            </h1>
+            <hr class="hidden">
+            <p class="vision-content content txt-white hidden">We envision a future where finance is revolutionized
+                through
+                cryptocurrency. With
+                integrity and innovation, we empower growth and drive positive global impact, unlocking limitless
+                potential
+                for our investments.</p>
+        </div>
+    </section>
+
+
+    <section class="our-focus" id="our-focus-section">
+        <div class="focus-container container">
+            <h1 class="focus-title title hidden">We Specialize in Cryptocurrency Investment Strategies and Portfolio
+                Management.</h1>
+            <hr class="hidden">
+            <p class="focus-content content hidden">Utilizing research-driven strategies
+                and active portfolio management to maximize returns. With a focus on risk management and education, we
+                aim to deliver superior results
+                and long-term value, managing our own capital.</p>
+        </div>
+    </section>
+
+    <section class="our-teams" id="our-team-section">
+        <div class="our-team-container">
+            <div class="our-team-title">
+                <h1 class="hidden">Our Team</h1>
+                <p class="hidden">Meet the founders of KongloBoy Captial</p>
+            </div>
+            <div class="team-container">
+                <div class="person hidden" id="ps-1">
+                    <div class="kito-pfp profile-photo"></div>
+                    <hr>
+                    <div class="person-desc">
+                        <p class="name">Kito Puransil</p>
+                        <p class="dept">Founder & CEO</p>
+                    </div>
+                </div>
+                <div class="person hidden" id="ps-2">
+                    <div class="torres-pfp profile-photo"></div>
+                    <hr>
+                    <div class="person-desc">
+                        <p class="name">Torres Bong</p>
+                        <p class="dept">Founder & CEO</p>
+                    </div>
+                </div>
+                <div class="person hidden" id="ps-3">
+                    <div class="rafel-pfp profile-photo"></div>
+                    <hr>
+                    <div class="person-desc">
+                        <p class="name">Rafel Supratman</p>
+                        <p class="dept">Founder & CEO</p>
+                    </div>
+                </div>
+                <div class="person hidden" id="ps-4">
+                    <div class="winston-pfp profile-photo"></div>
+                    <hr>
+                    <div class="person-desc">
+                        <p class="name">Winston Glenn D.</p>
+                        <p class="dept">Founder & CEO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="our-portfolio-section">
+        <h1 class="title hidden">Our Digital Liquid Assests</h1>
+        <div class="portfolio-container hidden">
+            <div class="coin" id="rndr">
+                <img src="https://altcoinsbox.com/wp-content/uploads/2023/03/render-token-logo.svg" alt="render logo">
+                <p>Render Network</p>
+                <p class="coin-code">RNDR</p>
+            </div>
+            <div class="coin" id="matic">
+                <img src="https://altcoinsbox.com/wp-content/uploads/2023/03/matic-logo.svg" alt="polygon logo">
+                <p>Polygon</p>
+                <p class="coin-code">MATIC</p>
+            </div>
+            <div class="coin" id="ondo">
+                <img src="https://pbs.twimg.com/profile_images/1614113185652670466/YeihoVJk_400x400.jpg"
+                    alt="ondo logo">
+                <p>Ondo Finance</p>
+                <p class="coin-code">ONDO</p>
+            </div>
+            <div class="coin" id="near">
+                <img src="https://research.binance.com/static/images/projects/near-protocol/logo.png" alt="near logo">
+                <p>Near Protocol</p>
+                <p class="coin-code">NEAR</p>
+            </div>
+            <div class="coin" id="gala">
+                <img src="https://assets.kraken.com/marketing/web/icons/sym-gala.svg" alt="gala logo">
+                <p>Gala</p>
+                <p class="coin-code">GALA</p>
+            </div>
+            <div class="coin" id="manta">
+                <img src="https://avatars.githubusercontent.com/u/74517090?s=200&v=4" alt="near logo">
+                <p>Manta Network</p>
+                <p class="coin-code">MANTA</p>
+            </div>
+
+            <div class="coin" id="bgb">
+                <img src="https://coinando.com/static/assets/coins/bitget-token-new-logo.png" alt="near logo">
+                <p>Bitget</p>
+                <p class="coin-code">BGB</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="coin-list" id="coin-information-section">
+        <h2 class="main-title title hidden">Coin Informations</h2>
+        <div class="coin-list-container hidden">
+            <div class="coins-title row">
+                <div class="coin-name cell">Coin Name</div>
+                <div class="coin-price cell">Price</div>
+                <div class="coin-price-24h cell">24h % Change</div>
+                <div class="coin-market-cap cell">Market Cap</div>
+            </div>
+            <% Object.keys(coins).forEach((coinSymbol, index)=> { %>
+                <% coins[coinSymbol].forEach(coin=> { %>
+                    <div class="coin-container row">
+                        <h2 class="cell-coin-name">
+                            <span class="numbering">
+                                <%= index + 1%>.
+                            </span>
+                            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/<%= coin.id %>.png">
+                            <%= coin.name %> <span>
+                                    <%= coin.symbol %>
+                                </span>
+                        </h2>
+                        <p class="cell">$<%= coin.quote.USD.price.toLocaleString() %>
+                        </p>
+                        <p class="cell">
+                            <%= coin.quote.USD.percent_change_24h.toLocaleString() %>%
+                        </p>
+                        <p class="cell">$<%= coin.quote.USD.market_cap.toLocaleString() %>
+                        </p>
+                        <br>
+                    </div>
+                    <% }); %>
+                        <% }); %>
+        </div>
+    </section>
+
+    <script src="navbar.js"></script>
+    <script src="index.js"></script>
+    <script src="app.js"></script>

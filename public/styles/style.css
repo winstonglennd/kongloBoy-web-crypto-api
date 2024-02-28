@@ -1,0 +1,450 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;                        
+}
+
+img:not([src]):not(:empty) {
+   content: none;
+}
+
+.txt-white {
+   color: white;
+}
+
+.gradient-background {
+   background: linear-gradient(46deg,#fd0d34,#341e52,#5b85ae,#8e79ad,#a099d8);
+   background-size: 300% 300%;
+   animation: gradient-animation 20s ease infinite;
+ }
+ 
+ @keyframes gradient-animation {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+
+
+.hidden {
+   opacity: 0;
+   filter: blur(5px);
+   transform: translateX(-100%);
+   transition: all 1s;
+}
+
+.show {
+   opacity: 1;
+   filter: blur(0);
+   transform: translateX(0);
+}
+
+.main-title {
+   display: flex;
+   justify-content: center;
+}
+
+.coins-title {
+   display: flex;
+   height: 60px;
+}
+
+.coins-title div {
+   width: 25%;
+   font-weight: bold;
+}
+
+.coins-title .coin-name {
+   width: 25%;
+}
+
+.coin-list-container {
+   display: flex;
+   flex-direction: column;
+   margin: 5vh 15vw;
+}
+
+.coin-container {
+   display: flex;
+   font-size: 0.8rem;
+   height: 80px;
+}
+
+.coin-container h2 {
+   width: 25%;
+   font-size: 0.8rem;
+}
+
+.coin-container img {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+
+}
+
+.coin-container h2 span {
+   font-weight: normal;
+}
+
+.coin-container p {
+   width: 25%;
+}
+
+.cell {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.row {
+   border-bottom: 2px solid black;
+}
+
+.cell-coin-name {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.numbering{
+   margin-right: 20px;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   height: 72vh;
+   padding: 10vh 10vw;
+   gap: 3.5vh;
+}
+
+.title {
+   display: flex;
+   font-size: 3rem;
+   text-align: center;
+   text-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+.content {
+   /* margin-top: 10vh; */
+   display: flex;
+   text-align: end;
+   font-size: 1.8rem;
+}
+
+.vision-container {
+   height: 100vh;
+}
+
+.vision-container hr {
+   width: 100%;
+   color: black;
+}
+
+.focus-title {
+   text-align: end;
+}
+
+.focus-content {
+   text-align: start;
+}
+
+.our-focus hr {
+   width: 30%;
+}
+
+.our-teams h1 {
+   display: flex;
+   justify-content: center;
+   font-size: 3rem;
+   margin: 0;
+   margin-bottom: 1vh;
+   margin-top: 5vh;
+}
+
+.our-team-title {
+   text-shadow: 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+.our-team-title p {
+   font-size: 1.5rem;
+   text-shadow: none;
+}
+
+.our-teams p {
+   display: flex;
+   justify-content: center;
+   margin: 0;
+}
+
+.team-container {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 3vh;
+}
+
+/* Delay animation for each card, creating a staggering effect */
+#ps-2 {
+   transition-delay: 200ms;
+}
+#ps-3  {
+   transition-delay: 400ms;
+}
+#ps-4  {
+   transition-delay: 600ms;
+}
+
+.profile-photo{
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border: 1px solid black;
+   margin-bottom: 2vh;
+   margin-top: 15%;
+   /* margin-bottom: 15%; */
+}
+.team-container p {
+   display: flex;
+   justify-content: center;
+   margin: 0;
+}
+
+.team-container .name {
+   margin-top: 15%;
+   font-weight: 700;
+}
+
+.team-container .dept {
+   font-size: small;
+}
+
+.person {
+   display: flex;
+   flex-direction: column;
+   width: 17vw;
+   height: 300px;
+   align-items: center;
+   border: 2px solid black;
+   border-radius: 10px;
+   background-image: none;
+}
+
+.our-team-container {
+   display: flex;
+   flex-direction: column;
+   padding: 8vh 10vw;
+   gap: 12vh;
+   height: 100vh;
+}
+
+.person hr {
+   width: 75%;
+}
+
+.coin {
+   display: flex;
+   flex-direction: row;
+   width: 30%;
+   height:fit-content;
+   gap: 1vw;
+   align-items: center;
+   min-height: 47px;
+}
+
+.coin img {
+   height: 64px;
+   width: 64px;
+   border-radius: 50%;
+}
+
+.coin p {
+   align-self: flex-end;
+}
+
+.portfolio-container {
+   display: flex;
+   flex-wrap: wrap;
+   width: 75vw;
+   gap: 3.5vw;
+   margin: 5vh 0;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 5vw;
+}
+
+#ondo img, #near img{
+   border: 1px solid black;
+}
+
+.portfolio {
+   height: 115vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.portfolio .title {
+   margin-top: 10vh;
+}
+
+.kito-pfp {
+   background-image: url(../images/kito_pfp.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+.torres-pfp {
+   background-image: url(../images/torres_pfp.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+.winston-pfp {
+   background-image: url(../images/IMG_3257.png);
+   background-position: bottom;
+   background-size: cover;
+
+}
+
+.rafel-pfp {
+   background-image: url(../images/IMG_3800.JPG);
+   background-position: center;
+   background-size: cover;
+}
+
+.coin-code {
+   color: rgba(0, 0, 0, 0.45);
+}
+
+.coin-list .title {
+   margin-top: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+   .title {
+       font-size: 2rem;
+   }
+   .content {
+       font-size: 1.25rem;
+   }
+
+   .our-team-title p {
+       text-align: center;
+   }
+
+   .team-container {
+       justify-content: center;
+   }
+
+   .profile-photo {
+       position: relative;
+       margin: 0;
+       width: 80px;
+       height:80px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .profile-photo::after {
+       content: " ";
+       position: absolute;
+       width: 1px;
+       height: 80%;
+       right: -40px;
+       background-color: black;
+   }
+
+   .team-container hr {
+       display: none;
+   }
+
+   .team-container .name {
+    margin-top: 0;
+   }
+
+   .team-container {
+       flex-direction: column;
+       gap: 50px;
+   }
+
+   .person {
+       width: 100%;
+       height: 12vh;
+       min-height: 100px;
+       flex-direction: row;
+       border-radius: 30px;
+       justify-content: space-around;
+   }
+
+   #ps-2 {
+       transition-delay:0ms;
+   }
+   #ps-3  {
+       transition-delay:0ms;
+   }
+   #ps-4  {
+       transition-delay:0ms;
+   }
+
+   .our-team-container {
+       gap: 0;
+   }
+
+   .team-container p {
+       justify-content: flex-start;
+   }
+
+   .coin img {
+       height: 32px;
+       width: 32px;
+       border-radius: 50%;
+   }
+
+   .coin p {
+       vertical-align: bottom;
+       font-size: 10px;
+   }
+
+   .portfolio {
+       height: 75vh;
+   }
+
+   .portfolio-container {
+       width: 80vw;
+       gap: 0;
+   }
+
+   .coin {
+        margin: 15px 0;
+        margin-right: 15vw;
+   }
+   
+   .coin-list-container {
+    max-width: 80vw;
+    overflow-x: scroll;
+    }
+
+    .row {
+        width: 150vw;
+        justify-content: space-between;
+    }
+
+    .our-team-title p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-height: 768px) and (max-width: 1024) {
+   .title {
+       font-size: 1.25rem;
+   }
+   .content {
+       font-size: 1.25rem;
+   }
+}
