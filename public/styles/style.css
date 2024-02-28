@@ -448,3 +448,20 @@ img:not([src]):not(:empty) {
        font-size: 1.25rem;
    }
 }
+
+@media screen and (max-width: 1025px) and (orientation: landscape) {
+    .vision-container {
+        height: 155vh;
+    }
+    .focus-container {
+        height: 155vh;
+    }
+
+    .our-team-container {
+        height: 200vh;
+    }
+
+    .portfolio {
+        height: 155vh;
+    }
+}
