@@ -130,6 +130,10 @@ img:not([src]):not(:empty) {
    text-shadow: 2px 2px rgba(0, 0, 0, 0.24);
 }
 
+.vision-title {
+   text-align: left;
+}
+
 .content {
    /* margin-top: 10vh; */
    display: flex;
