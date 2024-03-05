@@ -118,7 +118,7 @@ img:not([src]):not(:empty) {
 .container {
    display: flex;
    flex-direction: column;
-   height: 100vh;
+   height: 80vh;
    padding: 10vh 10vw;
    gap: 3.5vh;
 }
